@@ -17,33 +17,30 @@ CREATE TABLE employees (
      birth_date DATE NOT NULL,
      first_name VARCHAR(30) NOT NULL,
      last_name VARCHAR(30) NOT NULL,
-     sex CHAR NOT NULL,
+     sex CHAR CHECK ((sex= 'M') or (sex='F') or (sex ='m') or (sex='f')),
      hire_date DATE NOT NULL
      
 );
-
 
 CREATE TABLE dept_emp(
   emp_no INT REFERENCES employees (emp_no),
   dept_no VARCHAR(4) REFERENCES departments (dept_no) NOT NULL,
   PRIMARY KEY (emp_no, dept_no)
 );
-drop table dept_emp;
 
-select * from dept_emp;
 
 CREATE TABLE dept_manager (
     dept_no VARCHAR(4) REFERENCES departments (dept_no) NOT NULL,
     emp_no INT REFERENCES employees (emp_no) NOT NULL,
     PRIMARY KEY (emp_no, dept_no)
 );
-drop table dept_manager;
+
 
 CREATE TABLE salaries (
-  emp_no INT not null primary key,
-  salary INT NOT NULL,
-  foreign key (emp_no) references employees(emp_no)
+  emp_no INT primary key,
+  salary INT CHECK (salary>0) NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
-select * from salaries;
+
 
