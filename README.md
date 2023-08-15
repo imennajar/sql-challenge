@@ -53,7 +53,7 @@ In this project, we will see in the first part what the weather is like as we ap
 ### Data Modeling
 Inspecting the CSV files and sketching an Entity Relationship Diagram of the tables using QuickDBD
 
-<img src=EmployeeSQL/'QuickDBD-Free Diagram.png' style ='width:700px;height:300px'/>
+<img src='EmployeeSQL/QuickDBD-Free Diagram.png' style ='width:700px;height:300px'/>
 
 
 #### Data Engineering: Create tables of the database
