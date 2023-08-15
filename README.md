@@ -1,4 +1,4 @@
-# sql-challenge
+# SQL-challenge
 
 In this project we will do a research project about people employed during the 1980s and 1990s in a campany. 
 
