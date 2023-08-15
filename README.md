@@ -1,6 +1,6 @@
 # sql-challenge
 
-In this project, we will see how to use SQL stands for Structured Query Language to create a database and retrieve data.
+In this project, we will see how to use SQL, stands for Structured Query Language, to create a database and retrieve data.
 
 ## What we will learn from this project:
 
@@ -131,8 +131,9 @@ group by last_name
 order by last_name;
 ```
 
+### Supports: Slack AskBCS Learning Assistant/ Tutoring support
 
 
-For a better analysis of the relationship between weather variables and Latitude, we can create maps that display, for example in the Southern Hemisphere, a point for each city in our data. The size of the point will represent weather variables in each map.
+
 
 
