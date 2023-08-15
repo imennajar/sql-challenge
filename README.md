@@ -131,7 +131,7 @@ group by last_name
 order by last_name;
 ```
 
-### Supports: Slack AskBCS Learning Assistant/ Tutoring support
+##### Supports: Slack AskBCS Learning Assistant/ Tutoring support
 
 
 
