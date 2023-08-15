@@ -1,42 +1,26 @@
 # sql-challenge
 
 
-In this project, we will see how to use SQL stands for Structured Query Language to create  .
-In this project, we will see in the first part what the weather is like as we approach the equator, and in the second part how to plan future vacations using weather data skills.
-
+In this project, we will see how to use SQL stands for Structured Query Language to create a database and retrieve data.
 
 ## What we will learn from this project:
 
-- How to generate the Cities List by Using the citipy Library
+- Data Modeling: how to sketch an Entity Relationship Diagram of our tables starting from six CSV provided files.
   
-- How to use the OpenWeatherMap API to retrieve weather data from the cities list generated
+- Data Engineering: how to use the provided information to create a table schema for each of the six CSV files, to specify the data types, to specify constraints (PRIMARY KEY, FOREIGN KEY, Not NULL, UNIQUE, CHECK...), and to import each CSV file into its corresponding SQL table.
+--> The creation of the tables must be in the correct order to handle the foreign keys.
   
-- How Use the OpenWeatherMap API to retrieve weather data from the cities list generated in the started code
-  
-- How to use our skill to create Plots to showcase the relationship between weather variables and Latitude: Latitude vs. Temperature, Latitude vs. Humidity, Latitude vs. Cloudiness, and Latitude vs. Wind Speed.
-  
-- How to use our skills to compute Linear Regression for each relationship: Latitude vs. Temperature in Northern and Southern Hemisphere, Latitude vs. Humidity in Northern and Southern Hemisphere,
-  Latitude vs. Cloudiness in Northern and Southern Hemisphere, and Latitude vs. Wind Speed in Northern and Southern Hemisphere.  We will include the linear regression line, the model's formula, and the rvalues.
-  
-- How to create a map that displays a point for every city of our data using a characteristic of the weather
-  
-- How to narrow down our data to find our ideal weather condition
-  
-- How to use the Geoapify API to find hotels (or any other location)
-  
-- How to add the hotel name and the country as additional information in the hover message for each city in the map
+- Data Analysis: how to respond to requests according to users needs using the SELECT operation.
   
 ## Instructions:
 
-- Prepare the data
+- Create the ERD
 
-- Retrieve weather data
+- Create the tables
 
-- Create Plots
+- Import data from the CSV files
 
-- Compute Linear Regression Plots
-
-- Create Maps
+- Select data
 
 ## Program:
 
@@ -52,6 +36,8 @@ In this project, we will see in the first part what the weather is like as we ap
 ### Code 
 ### Data Modeling
 Inspecting the CSV files and sketching an Entity Relationship Diagram of the tables using QuickDBD
+
+Link:https://app.quickdatabasediagrams.com/#/d/aYLErN
 
 <img src='EmployeeSQL/QuickDBD-Free Diagram.png' style ='width:700px;height:300px'/>
 
@@ -77,35 +63,30 @@ CREATE TABLE employees (
      birth_date DATE NOT NULL,
      first_name VARCHAR(30) NOT NULL,
      last_name VARCHAR(30) NOT NULL,
-     sex CHAR NOT NULL,
+     sex CHAR CHECK ((sex= 'M') or (sex='F') or (sex ='m') or (sex='f')),
      hire_date DATE NOT NULL
      
 );
-
 
 CREATE TABLE dept_emp(
   emp_no INT REFERENCES employees (emp_no),
   dept_no VARCHAR(4) REFERENCES departments (dept_no) NOT NULL,
   PRIMARY KEY (emp_no, dept_no)
 );
-drop table dept_emp;
 
-select * from dept_emp;
 
 CREATE TABLE dept_manager (
     dept_no VARCHAR(4) REFERENCES departments (dept_no) NOT NULL,
     emp_no INT REFERENCES employees (emp_no) NOT NULL,
     PRIMARY KEY (emp_no, dept_no)
 );
-drop table dept_manager;
+
 
 CREATE TABLE salaries (
-  emp_no INT not null primary key,
-  salary INT NOT NULL,
-  foreign key (emp_no) references employees(emp_no)
+  emp_no INT primary key,
+  salary INT CHECK (salary>0) NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
-
-select * from salaries;
 
 
 ```
