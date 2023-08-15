@@ -1,5 +1,8 @@
 # sql-challenge
 
+In this project we will do a research project about people employed during the 1980s and 1990s in a campany. 
+
+We will design the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. That is, you’ll perform data modeling, data engineering, and data analysis, respectively.
 In this project, we will see how to use SQL, stands for Structured Query Language, to create a database and retrieve data.
 
 ## What we will learn from this project:
