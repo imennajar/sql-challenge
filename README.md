@@ -1,9 +1,9 @@
 # SQL-challenge
 
-In this project we will do a research project about people employed during the 1980s and 1990s in a campany. 
+In this project we will conduct a research project about people employed during the 1980s and 1990s in a company. 
 
-We will design the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. That is, you’ll perform data modeling, data engineering, and data analysis, respectively.
-In this project, we will see how to use SQL, stands for Structured Query Language, to create a database and retrieve data.
+We will design the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. That is, we will perform data modeling, data engineering, and data analysis, respectively.
+In this project, we will see how to use Structured Query Language (SQL) to create a database and retrieve data.
 
 ## What we will learn from this project:
 
@@ -12,7 +12,7 @@ In this project, we will see how to use SQL, stands for Structured Query Languag
 - Data Engineering: how to use the provided information to create a table schema for each of the six CSV files, to specify the data types, to specify constraints (PRIMARY KEY, FOREIGN KEY, Not NULL, UNIQUE, CHECK...), and to import each CSV file into its corresponding SQL table.
 --> The creation of the tables must be in the correct order to handle the foreign keys.
   
-- Data Analysis: how to respond to requests according to users needs using the SELECT operation.
+- Data Analysis: how to respond to requests according to users' needs using the SELECT operation.
   
 ## Instructions:
 
@@ -28,7 +28,7 @@ In this project, we will see how to use SQL, stands for Structured Query Languag
 
 ### Tools:
 
-- PostgreSQL: (usually referred to as "Postgres") is an  object-relational database management system that uses the SQL language.🐘
+- PostgreSQL: (usually referred to as "Postgres") is an object-relational database management system that uses the SQL language.🐘
 
 - pgAdmin: is the management tool used for working with Postgres. It simplifies creation, maintenance, and use of database objects.
   
@@ -134,7 +134,7 @@ group by last_name
 order by last_name;
 ```
 
-##### Supports: Slack AskBCS Learning Assistant/ Tutoring support
+##### Supports: Slack AskBCS Learning Assistant/Tutoring support
 
 
 
